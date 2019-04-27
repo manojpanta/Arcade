@@ -2,11 +2,12 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    rreturn queryInterface.bulkInsert('Games', [{
+
+    return queryInterface.bulkInsert('Games', [{
       title: 'Fix it Felix Jr.',
       price: 50,
       releaseYear: 1982,
-      active: true
+      active: true,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -14,7 +15,7 @@ module.exports = {
       title: 'Ms. Pac Man',
       price: 100,
       releaseYear: 1981,
-      active: true
+      active: true,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -22,7 +23,7 @@ module.exports = {
       title: 'Dig Dug',
       price: 75,
       releaseYear: 1982,
-      active: false
+      active: false,
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -30,7 +31,7 @@ module.exports = {
       title: 'Galaga',
       price: 125,
       releaseYear: 1981,
-      active: true
+      active: true,
       createdAt: new Date(),
       updatedAt: new Date()
     }
@@ -38,6 +39,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Games', null, {})
+    return queryInterface.bulkDelete('Games', null, {});
   }
 };
